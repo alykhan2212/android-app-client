@@ -15,6 +15,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "server-alpha"
           heroku_email: "elizaseo14@gmail.com"
+          appdir: "server"
         env:
           HD_APP_BASE: "server"
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
@@ -22,5 +23,6 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "client-alpha"
           heroku_email: "elizaseo14@gmail.com"
+          appdir: "web-client"
         env:
           HD_APP_BASE: "web-client"
