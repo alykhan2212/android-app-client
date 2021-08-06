@@ -9,8 +9,7 @@
   },
   "scripts": {
     "heroku-prebuild": "yarn install",
-    "start": "node index.js",
-    "heroku-postbuild": "yarn start"
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
