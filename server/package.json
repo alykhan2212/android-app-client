@@ -8,6 +8,7 @@
   },
   "scripts": {
     "heroku-prebuild": "yarn install",
+    "build": "sequelize db:migrate",
     "start": "node index.js",
     "db:create": "sequelize-cli db:create",
     "db:migrate": "sequelize-cli db:migrate",
