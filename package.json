@@ -1,0 +1,16 @@
+{
+  "name": "android-app-client",
+  "repository": "https://github.com/alykhan2212/android-app-client.git",
+  "author": "alykhan2212 <alykhan2212@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "./server",
+      "./web-client"
+    ]
+  },
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn web-client\""
+  }
+}

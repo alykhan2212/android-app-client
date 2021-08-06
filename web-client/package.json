@@ -1,0 +1,14 @@
+{
+  "name": "@alykhan2212/web-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "heroku-prebuild": "yarn install",
+    "start": "node index.js",
+    "heroku-postbuild": "yarn start"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
