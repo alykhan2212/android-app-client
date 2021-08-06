@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "heroku-prebuild": "yarn install",
     "start": "node index.js",
     "heroku-postbuild": "yarn start"
   },

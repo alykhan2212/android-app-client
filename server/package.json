@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "heroku-prebuild": "yarn install",
     "start": "node index.js",
     "heroku-postbuild": "yarn start",
     "db:create": "sequelize-cli db:create",
