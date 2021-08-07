@@ -22,8 +22,7 @@ module.exports = {
             ssl: {
                 require: true,
                 rejectUnauthorized: false
-        }
-
+            }
         },
         protocol: 'postgres',
         use_env_variable: 'DATABASE_URL'
