@@ -6,11 +6,12 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "./server",
-      "./web-client"
+      "server",
+      "web-client"
     ]
   },
   "scripts": {
-    "start": "yarn start"
+    "server": "yarn workspace @alykhan2212/server start",
+    "client": "yarn workspace @alykhan2212/web-client start"
   }
 }
