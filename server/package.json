@@ -8,13 +8,8 @@
   },
   "scripts": {
     "heroku-prebuild": "yarn install",
-    "build":"sequelize db:migrate:all && sequelize db:seed:all",
-    "start": "node index.js",
-    "db:create": "sequelize-cli db:create",
-    "db:migrate": "sequelize-cli db:migrate",
-    "db:g:migration": "sequelize-cli migration:generate --name",
-    "db:seeds": "sequelize-cli db:seed:all",
-    "db:g:seed": "sequelize-cli seed:generate --name"
+    "build": "sequelize db:migrate && sequelize db:seed:all",
+    "start": "node index.js"
   },
   "license": "MIT",
   "dependencies": {
