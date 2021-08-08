@@ -7,7 +7,10 @@ module.exports = (sequelize, DataTypes) => {
     {
       username: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        validate: {
+          isAlphanumeric: true,
+        }
       },
       email: {
         type: DataTypes.STRING,
@@ -28,6 +31,13 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     {
+      validate: {
+        passwordMatch() {
+          if (this.username == this.password) {
+            throw new Error('Sorry your password cannot contain your username');
+          }
+        }
+      },
       defaultScope: {
         attributes: { exclude: ['password'] },
       },
