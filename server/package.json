@@ -8,15 +8,15 @@
   },
   "scripts": {
     "heroku-prebuild": "yarn install",
-    "build": "sequelize db:migrate && sequelize db:seed:all",
-    "start": "node index.js"
+    "start": "pm2 start ecosystem.config.js"
   },
   "license": "MIT",
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "pg": "^8.7.1",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "pm2": "^5.1.0"
   },
   "devDependencies": {
     "sequelize-cli": "^6.2.0"
