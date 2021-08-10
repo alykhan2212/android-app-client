@@ -2,5 +2,7 @@ require('dotenv').config();
 const api = require('./app/api');
 
 api().then(() => {
-  console.log(`Example app`)
-});
+  console.log(`Server started...`)
+}).catch((err) => {
+  console.log(err);
+})

@@ -10,6 +10,11 @@
     "heroku-prebuild": "yarn install",
     "build": "sequelize db:migrate:all && sequelize db:seed:all",
     "start": "node index.js",
+    "server:up": "pm2-runtime start ecosystem.config.js",
+    "server:down": "pm2 stop ecosystem.config.js",
+    "server:dev": "pm2 start ecosystem.config.js --watch",
+    "server:clear": "pm2 delete ecosystem.config.js",
+    "server:logs": "pm2 logs",
     "db:create": "sequelize-cli db:create",
     "db:migrate": "sequelize-cli db:migrate",
     "db:g:migration": "sequelize-cli migration:generate --name",
@@ -26,9 +31,11 @@
     "express": "^4.17.1",
     "graphql": "^15.5.1",
     "graphql-resolvers": "^0.4.2",
+    "http": "^0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
+    "pm2": "^5.1.0",
     "sequelize": "^6.6.5"
   },
   "devDependencies": {

@@ -3,6 +3,7 @@ const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const typeDefs = require('../graphql/schema');
 const resolvers = require('../graphql/resolvers');
+const app = express();
 
 const PORT = process.env.PORT || 3000;
 
@@ -20,7 +21,11 @@ module.exports = async function startApolloServer() {
     });
 
     await apolloServer.start();
-    const app = express();
     apolloServer.applyMiddleware({ app, path: '/api' });
+
+    app.use('/app', (req, res) => {
+        res.send("Hello ! I am express");
+    });
+
     return await new Promise(resolve => app.listen(PORT, resolve));
 }
