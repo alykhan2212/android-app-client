@@ -1,2 +1,2 @@
-const userResolvers = require('./user');
-module.exports = [userResolvers];
+// const userResolvers = require('./user');
+// module.exports = [userResolvers];
