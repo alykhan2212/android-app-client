@@ -7,8 +7,8 @@
     "yarn": "1.22.11"
   },
   "scripts": {
-    "heroku-prebuild": "yarn install",
-    "start": "pm2 start ecosystem.config.js",
+    "heroku-prebuild": "yarn install",    
+    "start": "pm2-runtime start ecosystem.config.js",
     "dev": "pm2 start ecosystem.config.js --watch"
   },
   "license": "MIT",
