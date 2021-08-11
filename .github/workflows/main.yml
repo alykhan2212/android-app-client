@@ -17,6 +17,8 @@ jobs:
           heroku_email: ${{ secrets.MY_HEROKU_EMAIL }}
           appdir: "server"
         env:
+          HD_PORT:  3000
+          HD_APP_BASE: server
           HD_PROCFILE: server/Procfile
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
@@ -24,3 +26,7 @@ jobs:
           heroku_app_name: ${{ secrets.CLIENT_APP_NAME }}
           heroku_email: ${{ secrets.MY_HEROKU_EMAIL }}
           appdir: "web-client"
+        env:
+          HD_PORT:  4000
+          HD_APP_BASE: web-client
+          HD_PROCFILE: web-client/Procfile
