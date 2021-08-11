@@ -16,6 +16,8 @@ jobs:
           heroku_app_name: ${{ secrets.SERVER_APP_NAME }} 
           heroku_email: ${{ secrets.MY_HEROKU_EMAIL }}
           appdir: "server"
+        env:
+          PROCFILE: web-client/Procfile
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
